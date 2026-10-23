@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>Wishlist — Demosthene Rutherford Woodruff | Mes 18 ans</title>
+<style>
+:root{--bg:#080808;--panel:#141414;--gold:#e9bd62;--gold2:#f7df9b;--white:#f8f5ef;--muted:#b9b2a6;--line:#594727;--blue:#5bc8ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#242015 0%,#080808 48%);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+.wrap{max-width:1120px;margin:auto;padding:22px}.hero{text-align:center;padding:54px 18px 35px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.crown{font-size:35px;color:var(--gold)}.eyebrow{text-transform:uppercase;letter-spacing:4px;color:var(--gold2);font-size:12px;font-weight:bold}
+h1{font-size:clamp(34px,7vw,72px);line-height:1.02;margin:15px 0;color:var(--gold);text-transform:uppercase;letter-spacing:-1.5px}
+.name{font-size:clamp(16px,3vw,24px);letter-spacing:1px;margin:0 auto 14px;max-width:850px}.sub{color:var(--muted);max-width:670px;margin:0 auto 24px}
+.pill{display:inline-block;border:1px solid var(--gold);color:var(--gold2);border-radius:999px;padding:8px 15px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+section{padding:30px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+h2{font-size:24px;margin:0;color:var(--gold2)}.small{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,#1b1a17,#101010 75%);border-radius:16px;padding:17px;display:flex;flex-direction:column;min-height:235px;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.icon{font-size:36px;margin-bottom:8px}.category{font-size:10px;text-transform:uppercase;letter-spacing:1.7px;color:var(--gold);font-weight:bold}
+.card h3{margin:5px 0 7px;font-size:18px}.card p{color:var(--muted);font-size:13px;margin:0 0 14px;flex:1}
+.status{font-size:11px;color:#b9e7c4;margin:0 0 10px}.choose{width:100%;border:1px solid var(--gold);background:var(--gold);color:#15110a;border-radius:9px;padding:11px 12px;font-weight:bold;cursor:pointer}
+.choose:hover{background:var(--gold2)}.choose.selected{background:transparent;color:var(--gold2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.step{border:1px solid #3e3422;border-radius:13px;padding:16px;background:#111}.num{font-size:23px;color:var(--gold);font-weight:bold}
+.note{border:1px solid #5a4828;background:#15120b;border-radius:14px;padding:16px;color:#e8dfcc;font-size:13px}
+.formbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+label{display:block;color:var(--gold2);font-size:13px;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border-radius:9px;border:1px solid #51452f;background:#090909;color:white;font:inherit}
+textarea{min-height:90px;resize:vertical}.submit{margin-top:15px;width:100%;padding:13px;border:0;border-radius:9px;background:var(--gold);font-weight:bold;font-size:15px;cursor:pointer}
+#chosen{color:var(--gold2);font-weight:bold}.result{display:none;margin-top:16px;padding:14px;border:1px solid #4b704f;background:#101a12;border-radius:10px}
+footer{text-align:center;border-top:1px solid var(--line);padding:30px 10px;color:var(--muted);font-size:13px}.heart{color:var(--gold)}
+@media(max-width:560px){.wrap{padding:15px}.hero{padding-top:35px}.card{min-height:210px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="crown">♛</div>
+  <div class="eyebrow">Une nouvelle étape • De nouveaux rêves</div>
+  <h1>Wishlist<br>Mes 18 ans</h1>
+  <p class="name">Demosthene Rutherford Woodruff</p>
+  <p class="sub">Des cadeaux qui me feront plaisir, des rêves à réaliser et surtout des souvenirs à garder. Si tu souhaites participer à cette journée spéciale, choisis le cadeau qui te ferait plaisir de m’offrir.</p>
+  <span class="pill">Choisis un cadeau • Fais partie du souvenir</span>
+</header>
+
+<section>
+  <div class="section-head"><h2>🎁 Choisis ton cadeau</h2><span class="small">Sélectionne un cadeau pour préparer ta réservation.</span></div>
+  <div class="grid" id="gifts">
+    <article class="card" data-gift="Un iPhone"><div class="icon">📱</div><div class="category">Technologie</div><h3>Un iPhone</h3><p>Un compagnon pour mes projets, mes photos et mon quotidien.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un iPad Air avec carte SIM"><div class="icon">📲</div><div class="category">Technologie</div><h3>Un iPad Air avec carte SIM</h3><p>Pour apprendre, créer et avancer dans mes projets.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Des AirPods"><div class="icon">🎧</div><div class="category">Technologie</div><h3>Des AirPods</h3><p>De la musique et des moments à moi, partout.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une Apple Watch"><div class="icon">⌚</div><div class="category">Technologie</div><h3>Une Apple Watch</h3><p>Un cadeau pratique pour mon quotidien et mes activités.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un ordinateur portable"><div class="icon">💻</div><div class="category">Technologie</div><h3>Un ordinateur portable</h3><p>Un outil utile pour mes études et mes ambitions.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une PS5"><div class="icon">🎮</div><div class="category">Gaming</div><h3>Une PS5</h3><p>Pour les heures de jeu et de divertissement.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une paire de crampons"><div class="icon">⚽</div><div class="category">Football</div><h3>Une paire de crampons</h3><p>Pour continuer à progresser sur le terrain.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un sac de sport"><div class="icon">🎒</div><div class="category">Football</div><h3>Un sac de sport</h3><p>Pour transporter mon équipement avec style.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Des protège-tibias"><div class="icon">🛡️</div><div class="category">Football</div><h3>Des protège-tibias</h3><p>Un essentiel pour mes entraînements et mes matchs.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une tenue complète d’entraînement"><div class="icon">👕</div><div class="category">Football</div><h3>Une tenue complète d’entraînement</h3><p>Une tenue confortable pour donner le meilleur de moi-même.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une voiture"><div class="icon">🚘</div><div class="category">Grand rêve</div><h3>Une voiture</h3><p>Un rêve exceptionnel pour une nouvelle étape de ma vie.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un voyage"><div class="icon">✈️</div><div class="category">Expérience</div><h3>Un voyage</h3><p>Découvrir de nouveaux endroits et créer des souvenirs.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une expérience inoubliable pour mes 18 ans"><div class="icon">🌅</div><div class="category">Expérience</div><h3>Une expérience inoubliable</h3><p>Un moment spécial dont je me souviendrai longtemps.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une paire de sneakers premium"><div class="icon">👟</div><div class="category">Mode & style</div><h3>Une paire de sneakers premium</h3><p>Une paire qui complète mon style.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une montre élégante"><div class="icon">⌚</div><div class="category">Mode & style</div><h3>Une montre élégante</h3><p>Un accessoire intemporel pour marquer mes 18 ans.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un parfum de qualité"><div class="icon">✨</div><div class="category">Mode & style</div><h3>Un parfum de qualité</h3><p>Une touche personnelle pour mon quotidien.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une collection de vêtements"><div class="icon">🧥</div><div class="category">Mode & style</div><h3>Une collection de vêtements</h3><p>Des pièces que je pourrai porter et apprécier longtemps.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Des lunettes de soleil"><div class="icon">🕶️</div><div class="category">Mode & style</div><h3>Des lunettes de soleil</h3><p>Un accessoire stylé et utile.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Un sac à dos de marque"><div class="icon">🎒</div><div class="category">Mode & style</div><h3>Un sac à dos de marque</h3><p>Pratique pour mes déplacements et mes projets.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Des bijoux discrets et élégants"><div class="icon">💎</div><div class="category">Mode & style</div><h3>Des bijoux discrets et élégants</h3><p>Un petit détail pour rendre ce jour encore plus spécial.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+    <article class="card" data-gift="Une paire de chaussures habillées"><div class="icon">👞</div><div class="category">Mode & style</div><h3>Une paire de chaussures habillées</h3><p>Pour les occasions spéciales et les beaux souvenirs.</p><div class="status">● Disponible à la réservation</div><button class="choose" type="button">Choisir ce cadeau</button></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><h2>✨ Comment participer ?</h2><span class="small">Simple, attentionné et sans pression.</span></div>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><b>Découvre</b><div class="small">Parcours les idées de cadeaux.</div></div>
+    <div class="step"><div class="num">02</div><b>Choisis</b><div class="small">Sélectionne le cadeau qui te plaît.</div></div>
+    <div class="step"><div class="num">03</div><b>Indique tes coordonnées</b><div class="small">Pour que je puisse te reconnaître et te remercier.</div></div>
+    <div class="step"><div class="num">04</div><b>Confirme et organise</b><div class="small">Nous conviendrons ensemble de la remise du cadeau.</div></div>
+  </div>
+</section>
+
+<section id="reservation">
+  <div class="section-head"><h2>🔐 Réserver un cadeau</h2><span class="small">Choisis un cadeau ci-dessus, puis complète ce formulaire.</span></div>
+  <div class="formbox">
+    <p>Ton choix : <span id="chosen">Aucun cadeau sélectionné</span></p>
+    <form id="reserveForm">
+      <label for="guest">Ton prénom et ton nom *</label><input id="guest" name="guest" required placeholder="Ex. Marie Jean">
+      <label for="gift">Cadeau choisi *</label>
+      <select id="gift" name="gift" required><option value="">Sélectionne un cadeau</option></select>
+      <label for="contact">Ton moyen de contact (facultatif)</label><input id="contact" name="contact" placeholder="WhatsApp ou e-mail">
+      <label for="message">Un petit message (facultatif)</label><textarea id="message" name="message" placeholder="Un mot pour mes 18 ans…"></textarea>
+      <button class="submit" type="submit">Préparer ma réservation</button>
+    </form>
+    <div class="result" id="result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section><div class="note"><b>Petit rappel :</b> cette version est un modèle interactif. Les réservations ne sont pas encore envoyées à Demosthene et les statuts ne se synchronisent pas entre visiteurs. Pour activer les réservations partagées et masquer automatiquement les cadeaux réservés, il faudra connecter un formulaire/base de données et publier la page en ligne. Ne saisis pas d’informations sensibles.</div></section>
+<footer><div class="heart">♡ Merci de faire partie de mes 18 ans ♡</div><p>Un rêve • Une vie • Mon avenir</p><p>Demosthene Rutherford Woodruff</p></footer>
+</div>
+<script>
+const cards=[...document.querySelectorAll('.card')], select=document.getElementById('gift'), chosen=document.getElementById('chosen');
+cards.forEach(card=>{
+  const name=card.dataset.gift;
+  const option=document.createElement('option'); option.value=name; option.textContent=name; select.appendChild(option);
+  card.querySelector('button').addEventListener('click',()=>{
+    select.value=name; chosen.textContent=name;
+    cards.forEach(c=>{c.querySelector('button').classList.remove('selected');c.querySelector('button').textContent='Choisir ce cadeau'});
+    card.querySelector('button').classList.add('selected');card.querySelector('button').textContent='Cadeau sélectionné ✓';
+    document.getElementById('reservation').scrollIntoView({behavior:'smooth'});
+  });
+});
+select.addEventListener('change',()=>chosen.textContent=select.value||'Aucun cadeau sélectionné');
+document.getElementById('reserveForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const d=new FormData(e.target);
+ const summary=`Bonjour Demosthene ! Je souhaite réserver un cadeau pour tes 18 ans.\n\nNom : ${d.get('guest')}\nCadeau : ${d.get('gift')}\nContact : ${d.get('contact')||'Non renseigné'}\nMessage : ${d.get('message')||'Aucun'}`;
+ const box=document.getElementById('result'); box.style.display='block';
+ box.innerHTML='<b>Ta réservation est préparée !</b><p>Copie le message ci-dessous et envoie-le à Demosthene par le moyen de contact qu’il communiquera.</p><textarea id="copyText" readonly></textarea><button class="submit" type="button" id="copyBtn">Copier le message</button>';
+ document.getElementById('copyText').value=summary;
+ document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary);document.getElementById('copyBtn').textContent='Message copié ✓'}catch(err){document.getElementById('copyText').select();document.execCommand('copy');document.getElementById('copyBtn').textContent='Sélectionne et copie le message'}});
+});
+</script>
+</body></html>
